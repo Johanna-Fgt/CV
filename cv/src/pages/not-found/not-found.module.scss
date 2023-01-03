@@ -1,0 +1,61 @@
+@use '../../style/mixins' as mxn;
+
+//hide the navigation
+.container {
+	height: 100vh;
+	padding: 20px;
+	@include mxn.flex(column, 1rem);
+	justify-content: center;
+	@include mxn.absolute(0, 0);
+	z-index: 20;
+	color: var(--color-text);
+	background-color: var(--bg-color);
+	.img {
+		min-width: 280px;
+		min-height: 280px;
+		width: 60%;
+		@media all and (min-width: 1024px) {
+			min-width: 50%;
+			height: 400px;
+		}
+	}
+	.wrapper {
+		@include mxn.flex(column, 2rem);
+		justify-content: center;
+		header {
+			@include mxn.flex(row, 15px);
+			margin-top: -5rem;
+			h1 {
+				font-size: 6rem;
+				color: var(--green);
+			}
+			p {
+				border-left: 1px var(--light) solid;
+				padding-top: 60px;
+				padding-left: 5px;
+				align-self: flex-end;
+				font-style: italic;
+			}
+			span {
+				color: var(--orange);
+			}
+			@media all and (min-width: 768px) {
+				gap: 4rem;
+			}
+		}
+		.countdown {
+			color: var(--orange);
+			@include mxn.flex(column, 2rem);
+			p:last-child {
+				font-size: var(--font-size-subtitle-mobile);
+				font-weight: 700;
+				@media all and (min-width: 1024px) {
+					font-size: var(--font-size-subtitle);
+				}
+			}
+		}
+	}
+	@media all and (min-width: 1024px) {
+		@include mxn.flex(row, 40px);
+	}
+}

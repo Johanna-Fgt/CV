@@ -1,0 +1,77 @@
+//POSITIONS
+@mixin flex($direction, $gap) {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: $direction;
+	gap: $gap;
+	@if ($direction == 'row') {
+		justify-content: center;
+	}
+}
+@mixin absolute($top, $left) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	@if ($top == '50%' && $left == '50%') {
+		transform: translate(-$top, -$left);
+	}
+}
+
+//STYLING EFFECTS
+@mixin filter($color) {
+	box-shadow: 1px 2px 2px $color, 2px 4px 4px var(--light), 3px 6px 6px $color;
+}
+@mixin bright($color) {
+	filter: brightness(1.5) drop-shadow(0px 0px 4px $color);
+}
+
+//BACKGROUNDS
+@mixin background-image($color, $src) {
+	background-color: $color;
+	background-image: $src;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+//ANIMATIONS
+@mixin dancing($duration) {
+	animation: dancing $duration linear infinite;
+	@keyframes dancing {
+		0% {
+			transform: rotate(13deg) scale(2);
+		}
+		25% {
+			transform: rotate(0deg);
+		}
+		50% {
+			transform: rotate(-13deg) scale(2);
+		}
+		75% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(13deg) scale(2);
+		}
+	}
+}
+@mixin filling($dasharray, $percent) {
+	animation: filling 1500ms linear forwards;
+	@keyframes filling {
+		100% {
+			stroke-dashoffset: calc($dasharray - $dasharray * $percent);
+		}
+	}
+}
+@mixin loading($color) {
+	@keyframes load7 {
+		0%,
+		80%,
+		100% {
+			box-shadow: 0 25px 0 -13px var(--white);
+		}
+		40% {
+			box-shadow: 0 25px 0 0 $color;
+		}
+	}
+}
