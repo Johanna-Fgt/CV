@@ -10,29 +10,20 @@ body {
 	font-family: var(--font-family-default);
 	font-size: var(--font-size-default-mobile);
 	line-height: 1.7;
-	color: var(--white);
+	color: var(--color-text);
 	background-color: var(--bg-color);
 	#root {
-		@include mxn.flex(column, 0);
+		@include mxn.flex(column);
 		main {
 			overflow-y: auto;
 			overflow-x: hidden;
 			height: 80vh;
 			@include mxn.flex(column, 4rem);
-
 			section {
-				@include mxn.flex(column, 2.5rem);
-				max-width: var(--max-width);
-				.wrapper {
-					@include mxn.flex(column, 2.5rem);
-					@media all and (min-width: 1024px) {
-						@include mxn.flex(row, 0);
-					}
+				&:not(.container-full) {
+					max-width: var(--max-width);
+					padding: 20px;
 				}
-				@media all and (min-width: 1440px) {
-					padding-top: 4rem;
-				}
-				//elles toutes le même début cf className container
 			}
 			@media all and (min-width: 425px) {
 				//Scrollbar Chrome
@@ -71,24 +62,26 @@ body {
 		font-size: var(--font-size-default);
 	}
 }
+
+//TITLES
 h1,
 h2 {
-	text-align: center;
+	text-align: left;
 }
-
 h1 {
 	font-size: var(--font-size-title-mobile);
 	@media all and (min-width: 728px) {
 		font-size: var(--font-size-title);
 	}
 }
-
 h2 {
 	font-size: var(--font-size-subtitle-mobile);
 	@media all and (min-width: 728px) {
 		font-size: var(--font-size-subtitle);
 	}
 }
+
+//LINKS
 a {
 	cursor: pointer;
 	text-decoration: none;
@@ -98,20 +91,3 @@ a {
 		font-weight: bold;
 	}
 }
-i {
-	color: var(--light);
-}
-// .btn {
-// 	background-color: #6c847e;
-// 	color: #fef9ef;
-// 	text-align: center;
-// 	width: fit-content;
-// 	font-size: 0.5rem;
-// 	padding: 0.6rem;
-// 	margin: 0.5rem;
-// 	border-radius: 50px;
-// 	&:hover {
-// 		font-weight: normal;
-// 		background-color: #bc533b;
-// 	}
-// }

@@ -1,14 +1,12 @@
 @use '../../style/mixins' as mxn;
 
-//hide the navigation
 .container {
 	height: 100vh;
 	padding: 20px;
 	@include mxn.flex(column, 1rem);
 	justify-content: center;
-	@include mxn.absolute(0, 0);
+	@include mxn.absolute(0, 0, 0);
 	z-index: 20;
-	color: var(--color-text);
 	background-color: var(--bg-color);
 	.img {
 		min-width: 280px;

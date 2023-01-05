@@ -43,14 +43,14 @@ const Header = () => {
 					Formations
 				</Link>
 				<Link
-					to="/experience"
+					to="/experiences"
 					onClick={() => {
 						setMenuOpen(!menuOpen);
 					}}>
 					Expériences
 				</Link>
 				<Link
-					to="/work"
+					to="/portfolio"
 					onClick={() => {
 						setMenuOpen(!menuOpen);
 					}}>

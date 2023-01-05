@@ -1,0 +1,49 @@
+@use '../../style/mixins' as mxn;
+
+.container {
+	@include mxn.flex(column, 4rem);
+
+	list-style: none;
+	padding: 80px 0;
+	background-color: var(--light);
+	li {
+		--width: 280px;
+		--height: 140px;
+		@include mxn.flex(column, 2rem);
+		align-items: stretch;
+		width: var(--width);
+		background-color: var(--white);
+		border-radius: var(--border-radius);
+		.img {
+			width: var(--width);
+			height: var(--height);
+			border-top-left-radius: var(--border-radius);
+			border-top-right-radius: var(--border-radius);
+		}
+		.wrapper {
+			padding: 10px;
+			.title {
+				color: var(--green);
+			}
+			.content {
+				@include mxn.flex(row);
+				justify-content: space-between;
+				p {
+					width: 80%;
+				}
+				.btn {
+					@include mxn.btn(var(--green), var(--orange));
+				}
+			}
+		}
+		@media all and (min-width: 768px) {
+			--width: 300px;
+			--height: 180px;
+			height: calc(var(--height) * 2);
+		}
+	}
+	@media all and (min-width: 768px) {
+		@include mxn.flex(row, 40px);
+		flex-wrap: wrap;
+	}
+}

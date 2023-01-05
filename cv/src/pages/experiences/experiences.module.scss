@@ -1,0 +1,9 @@
+@use '../../style/mixins' as mxn;
+
+.container {
+	@include mxn.flex(column);
+	h1 {
+		@include mxn.title(var(--orange));
+		align-self: flex-start;
+	}
+}

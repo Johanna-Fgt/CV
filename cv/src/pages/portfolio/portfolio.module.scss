@@ -1,0 +1,32 @@
+@use '../../style/mixins' as mxn;
+
+.container {
+	@include mxn.flex(column);
+	h1 {
+		@include mxn.title(var(--orange));
+		align-self: flex-start;
+	}
+	.wrapper {
+		--size: 32px;
+		@include mxn.flex(column, 2rem);
+		padding: 0 20px;
+		.img {
+			width: var(--size);
+			height: var(--size);
+		}
+		@media all and (min-width: 425px) {
+			--size: 48px;
+			@include mxn.flex(row, 20px);
+			justify-content: flex-start;
+			div {
+				max-width: 80%;
+			}
+		}
+		@media all and (min-width: 768px) {
+			gap: 40px;
+		}
+	}
+}
+.container-portfolio {
+	width: 100%;
+}

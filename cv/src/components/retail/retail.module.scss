@@ -1,0 +1,12 @@
+@use '../../style/mixins' as mxn;
+
+.container {
+	min-width: 100%;
+	ul {
+		padding: 0 40px;
+	}
+	p:nth-child(even) {
+		padding-top: 10px;
+		color: var(--orange);
+	}
+}

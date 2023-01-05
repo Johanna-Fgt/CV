@@ -1,0 +1,31 @@
+@use '../../style/mixins' as mxn;
+
+.container {
+	@include mxn.flex(column);
+	h1 {
+		@include mxn.title(var(--orange));
+		align-self: flex-start;
+	}
+	ul {
+		padding: 0 40px;
+		list-style: none;
+		li {
+			line-height: 2;
+			padding: 1rem 0;
+			span:first-child {
+				color: var(--green);
+				font-weight: 700;
+				letter-spacing: 1px;
+			}
+			span:last-child {
+				font-weight: 300;
+			}
+			strong {
+				color: var(--orange);
+			}
+		}
+	}
+	.btn {
+		@include mxn.large-btn;
+	}
+}
