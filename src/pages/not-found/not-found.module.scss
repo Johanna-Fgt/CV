@@ -6,7 +6,7 @@
 	@include mxn.flex(column, 1rem);
 	justify-content: center;
 	@include mxn.absolute(0, 0, 0);
-	z-index: 20;
+	z-index: 2000;
 	background-color: var(--bg-color);
 	.img {
 		min-width: 280px;
