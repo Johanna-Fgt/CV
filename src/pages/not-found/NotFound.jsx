@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import mc from './not-found.module.scss';
 import img from '../../assets/img/error404.jpg';
 import Button from '../../components/button/Button';
@@ -22,7 +22,7 @@ const NotFound = () => {
 		return () => {
 			clearInterval(interval);
 		};
-	}, []);
+	}, [navigate]);
 
 	return (
 		<section className={mc.container}>
