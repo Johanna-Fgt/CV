@@ -14,6 +14,8 @@ const Header = () => {
 					<p>Future développeuse web et mobile</p>
 				</Link>
 				<button
+					role="navigation"
+					aria-label="Open navigation"
 					className={!menuOpen ? mc.burger : mc.close}
 					onClick={() => {
 						setMenuOpen(!menuOpen);

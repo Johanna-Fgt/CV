@@ -7,21 +7,24 @@ import Education from '../../pages/education/Education';
 import Experiences from '../../pages/experiences/Experiences';
 import Portfolio from '../../pages/portfolio/Portfolio';
 import NotFound from '../../pages/not-found/NotFound';
+import Footer from '../footer/Footer';
 
 const App = () => {
 	return (
 		<>
 			<Header />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/home" element={<Home />} />
-				<Route path="/skills" element={<Skills />} />
-				<Route path="/education" element={<Education />} />
-				<Route path="/experiences" element={<Experiences />} />
-				<Route path="/portfolio" element={<Portfolio />} />
-				<Route path="*" element={<NotFound />} />
-			</Routes>
-			{/* <Footer /> */}
+			<div className="main-wrapper">
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/home" element={<Home />} />
+					<Route path="/skills" element={<Skills />} />
+					<Route path="/education" element={<Education />} />
+					<Route path="/experiences" element={<Experiences />} />
+					<Route path="/portfolio" element={<Portfolio />} />
+					<Route path="*" element={<NotFound />} />
+				</Routes>
+				<Footer />
+			</div>
 		</>
 	);
 };

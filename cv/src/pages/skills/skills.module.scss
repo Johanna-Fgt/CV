@@ -52,7 +52,6 @@
 .container-soft-skills {
 	@include mxn.flex(column);
 	background-color: var(--light);
-
 	h1 {
 		@include mxn.title(var(--green));
 		align-self: flex-start;

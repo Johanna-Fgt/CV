@@ -4,6 +4,7 @@ import StarCommand from '../assets/img/star-command.jpg';
 import MoonSurfSchool from '../assets/img/moon-surf-school-profs.jpg';
 import Colchis from '../assets/img/colchis.jpg';
 import Argo from '../assets/img/Argo.jpg';
+import Freshly from '../assets/img/freshly.jpg';
 import Cthulhu from '../assets/img/cthulhu.jpg';
 
 export const portfolio = [
@@ -14,6 +15,14 @@ export const portfolio = [
 		title: 'Cthulhu Games',
 		code: 'HTML5 / Sass / Javascript',
 		repo: 'https://github.com/Johanna-Fgt/cthulhu-games',
+	},
+	{
+		path: 'https://johanna-fgt.github.io/Freshly_restaurant_3wa/index.html',
+		img: Freshly,
+		alt: 'Site de Freshly Restaurant',
+		title: 'Freshly Restaurant',
+		code: 'HTML5 / Sass',
+		repo: 'https://github.com/Johanna-Fgt/Freshly_restaurant_3wa',
 	},
 	{
 		path: 'https://johanna-fgt.github.io/CookingConverter/',

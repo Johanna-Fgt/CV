@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import PhotoDeProfil from '../../assets/img/profile.jpeg';
+import PhotoDeProfil from '../../assets/img/profile.jpg';
 import CV from '../../assets/doc/CV_Johanna_Faget_Dev_Web.pdf';
 import mc from './home.module.scss';
 

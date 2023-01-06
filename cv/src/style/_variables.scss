@@ -1,7 +1,7 @@
 :root {
 	--light: #fef9ef;
-	--green: #5f7c74; //a11y contrast 4.5 / white & 4.62 / black => AA
-	--orange: #c74e33; //a11y contrast 4.59 / white & 4.56 / black => AA
+	--green: #587970; //a11y contrast 4.79 / white & 4.56 / light => AA
+	--orange: #c74123; //a11y contrast 4.98 / white & 4.75 / light => AA
 	--white: white;
 	--bg-color: var(--white);
 	--color-text: #32120e; //a11y contrast AAA / white & AAA / light => AAA - never use on other colors
@@ -15,7 +15,4 @@
 	--font-size-subtitle-mobile: 1.8rem;
 	--font-size-default-button: 1.3rem;
 	--max-width: 900px;
-	// --mobile: 425px; //L
-	// --tablet: 768px;
-	// --laptop: 1024px;
 }

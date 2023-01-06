@@ -14,44 +14,47 @@ body {
 	background-color: var(--bg-color);
 	#root {
 		@include mxn.flex(column);
-		main {
+
+		height: 100vh;
+		.main-wrapper {
+			min-width: 100%;
+			max-width: 100%;
 			overflow-y: auto;
 			overflow-x: hidden;
-			height: 80vh;
-			@include mxn.flex(column, 4rem);
-			section {
-				&:not(.container-full) {
-					max-width: var(--max-width);
-					padding: 20px;
+			main {
+				min-height: 80vh;
+
+				@include mxn.flex(column, 4rem);
+				section {
+					&:not(.container-full) {
+						max-width: var(--max-width);
+						padding: 20px;
+					}
 				}
 			}
+			//Scrollbar Chrome
 			@media all and (min-width: 425px) {
-				//Scrollbar Chrome
 				&::-webkit-scrollbar {
 					width: 8px;
 				}
 				&::-webkit-scrollbar-track {
-					background: var(--bg-color);
+					background: transparent;
 					margin-block: 6rem;
-					box-shadow: inset 0 0 1px #32120e;
+					box-shadow: inset 0 0 1px var(--color-text);
 					border-radius: 10px;
 				}
 				&::-webkit-scrollbar-thumb {
-					background: rgb(108, 132, 126);
-					background: linear-gradient(
-						0deg,
-						rgba(108, 132, 126, 1) 0%,
-						rgba(254, 249, 239, 1) 100%
-					);
+					background: var(--green);
+					background: linear-gradient(0deg, var(--green) 0%, var(--light) 100%);
 					border-radius: 10px;
-					box-shadow: inset 0 0 0px 2px black;
+					// box-shadow: inset 0 0 0px 2px var(--color-text);
 					&:hover {
 						box-shadow: none;
-						background: rgb(188, 83, 59);
+						background: var(--orange);
 						background: linear-gradient(
 							184deg,
-							rgba(188, 83, 59, 1) 0%,
-							rgba(254, 249, 239, 1) 100%
+							var(--orange) 0%,
+							var(--light) 100%
 						);
 					}
 				}

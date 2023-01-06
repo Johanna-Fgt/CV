@@ -1,0 +1,55 @@
+@use '../../style/mixins' as mxn;
+
+.container {
+	--size: 48px;
+	height: 20vh;
+	@include mxn.flex(column);
+	padding: 40px;
+	background: linear-gradient(0deg, var(--green) 0%, var(--light) 100%);
+
+	.contact,
+	.close {
+		width: var(--size);
+		height: var(--size);
+		cursor: pointer;
+		border-radius: 50%;
+		background-color: var(--light);
+		position: relative;
+		z-index: 1000;
+		&:before {
+			@include mxn.absolute;
+		}
+	}
+	.contact:before {
+		content: url('../../assets/icons/mail.svg');
+		height: calc(var(--size) / 2);
+	}
+	.close:before {
+		content: url('../../assets/icons/close.svg');
+	}
+
+	.modal {
+		@include mxn.absolute;
+		bottom: 0;
+		right: 0;
+		height: 100vh;
+		z-index: 999;
+		@include mxn.flex(column, 2rem);
+		justify-content: center;
+		background-color: var(--light);
+		h1 {
+			color: var(--orange);
+		}
+		a {
+			@include mxn.flex(row, 1rem);
+			justify-content: center;
+			align-items: center;
+			&:before {
+				content: url('../../assets/icons/send_24.svg');
+			}
+			&:last-child:before {
+				content: url('../../assets/icons/linkedin.svg');
+			}
+		}
+	}
+}
