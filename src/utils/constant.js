@@ -6,8 +6,17 @@ import Colchis from '../assets/img/colchis.jpg';
 import Argo from '../assets/img/Argo.jpg';
 import Freshly from '../assets/img/freshly.jpg';
 import Cthulhu from '../assets/img/cthulhu.jpg';
+import Botanique from '../assets/img/carnet-botanique.jpg';
 
 export const portfolio = [
+	{
+		path: 'https://docs.google.com/presentation/d/1Z4u4h-28QRIMLPml_7ZBoHBa1FWQxTIYsLORX0K9vEs/edit?usp=sharing',
+		img: Botanique,
+		alt: 'Carnet Botanique',
+		title: 'Carnet Botanique',
+		code: `Présentation disponble en cliquant sur l'image`,
+		repo: 'https://bitbucket.org/johanna-fgt/workspace/projects/BOT',
+	},
 	{
 		path: 'https://johanna-fgt.github.io/cthulhu-games/index.html',
 		img: Cthulhu,
