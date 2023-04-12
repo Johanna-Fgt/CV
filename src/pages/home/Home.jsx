@@ -18,14 +18,14 @@ const Home = () => {
 					<p className={mc.lead}>Développeuse web et mobile en devenir</p>
 					<p>
 						J'adore apprendre et relever des défis, autant dire <br />
-						<strong>{`< strong >" j'adore coder " !</ strong >`}</strong>
+						<strong>{`< strong >" j'adore coder " </ strong >`}</strong>
 					</p>
 					<p>
 						Alors je me lance dans une reconversion professionnelle audacieuse.
 					</p>
 					<p>
-						Je recherche une entreprise bienveillante pour m'accueillir en stage
-						à la fin de ma formation.
+						Je recherche une entreprise bienveillante pour m'accueillir en
+						contrat de professionnalisation.
 					</p>
 					<a href={CV} target="blanck" className={mc.btn}>
 						CV
@@ -38,21 +38,24 @@ const Home = () => {
 
 					<p>
 						En reconversion professionnelle, j'ai intégré la formation de
-						développeuse web et mobile à la 3W Academy en septembre dernier. Je
-						souhaite poursuivre ma montée en compétences avec une formation de
-						"Conceptrice Développeuse d'Application" en alternance après
-						l'obtention du titre.
+						développeuse web et mobile à la 3W Academy en septembre dernier et
+						j'ai aujourd'hui l'immense joie d'être diplômée ! Ce n'est bien sûr
+						qu'un premier pas vers l'emploi alors je souhaite poursuivre ma
+						montée en compétences avec une formation de "Conceptrice
+						Développeuse d'Application" en alternance afin de me
+						professionnaliser.
 					</p>
 					<p>
-						Je recherche une entreprise bienveillante qui m'accueillera pour un{' '}
-						<Link to="/education">stage d'un mois</Link> ( gratuit et
-						conventionné par pôle emploi) en février prochain.
+						Je recherche donc une entreprise qui m'accueillera en{' '}
+						<Link to="/education">contrat de professionnalisation</Link> afin
+						d'élargir mes connaissances et acquérir de nouvelles aptitudes qui
+						me permettront de réaliser au mieux mes futures missions.
 					</p>
 					<p>
-						Apprendre avec des développeurs professionnels serait pour moi une
-						super occasion de progresser, et de débuter ma nouvelle carrière
-						dans les meilleures conditions. J'adore relever de nouveaux défis et
-						je suis prête à me donner à fond pour réussir.
+						Apprendre avec des développeurs professionnels sera pour moi une
+						superbe opportunité de débuter ma nouvelle carrière dans les
+						meilleures conditions. Je suis prête à m'investir à fond et à
+						réussir.
 					</p>
 					<p>
 						Je vous invite à consulter le détail des{' '}

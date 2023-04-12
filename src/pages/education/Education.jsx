@@ -8,7 +8,7 @@ const Education = () => {
 				<ul>
 					<li>
 						<span>Développeur.se web et mobile</span>
-						<span> - 3WAcademy - Septembre 2022</span>
+						<span> - 3WAcademy - Mai 2023</span>
 					</li>
 					<li>
 						<span>Création de site web avec HTML5 et CSS3</span>
@@ -45,7 +45,7 @@ const Education = () => {
 					</li>
 				</ul>
 			</section>
-			<section className={mc.container}>
+			{/* <section className={mc.container}>
 				<h1>Stage </h1>
 				<ul>
 					<li>
@@ -59,10 +59,10 @@ const Education = () => {
 						</span>
 					</li>
 				</ul>
-			</section>
+			</section> */}
 			<section className={mc.container}>
 				<h1>Contrat de professionnalisation</h1>
-				<ul>
+				{/* <ul>
 					<li>
 						<span>
 							Conceptrice Développeuse d'Application - Wild Code School / RNCP
@@ -82,7 +82,7 @@ const Education = () => {
 					target="_blank"
 					rel="noreferrer">
 					Découvrir l'école
-				</a>
+				</a> */}
 			</section>
 		</main>
 	);
